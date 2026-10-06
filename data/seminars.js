@@ -32,8 +32,8 @@ window.VCIM_DATA = {
         },
         {
           "date": "2026-09-28",
-          "speaker": "Sab's Students",
-          "title": "ISMAR talks"
+          "speaker": "Raquel Cabrera and Graciela Fidalgo",
+          "title": "ISMAR 2026 talks"
         },
         {
           "date": "2026-10-05",
