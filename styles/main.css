@@ -7,3 +7,31 @@
 @media(max-width:365px){.hero-meta-last{display:none!important}.hero h1{font-size:43px}.next-strip{padding-inline:15px}.next-speaker{font-size:14px}.next-date{font-size:9px}.semester-tab{padding-inline:10px}.semester-summary h3{font-size:18px}.semester-status{font-size:7px}.schedule-actions .icon-button,.schedule-actions .text-button{width:29px;height:30px;min-height:30px}.talk-row{grid-template-columns:60px 1fr;gap:5px 10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.button-primary:hover{transform:none}}
 @media print{@page{margin:16mm}html,body{background:white;color:black;font-size:11pt}.container{width:100%;max-width:none}body>*:not(main),main>*:not(.schedule-section),.section-intro,.semester-bar,.schedule-actions,.filter-bar,.schedule-footnote p:last-child,.toast,.skip-link{display:none!important}.schedule-section{padding:0}.section-heading{margin-bottom:15px}h2{font-size:26pt}.section-eyebrow{font-size:8pt}.semester-summary{padding:10px 0 16px}.semester-summary h3{font-size:18pt}.semester-date-range{font-size:9pt}.talk-header,.talk-row{display:grid;grid-template-columns:90px 140px 1fr;gap:15px;padding:14px 5px;border-color:#bbb}.talk-row{break-inside:avoid;page-break-inside:avoid}.talk-date{display:flex;flex-direction:row;grid-column:auto;grid-row:auto;gap:8px;padding:0}.talk-speaker,.talk-title{grid-column:auto;font-size:10pt}.talk-row.next-talk{border:0;border-bottom:1px solid #bbb;background:none}.talk-row.next-talk::before{display:none}.next-tag{display:none}.date-day{font-size:22pt}.date-month,.date-weekday{font-size:8pt}.schedule-footnote{font-size:8pt}a::after{content:none!important}#semester-panel{outline:none!important}}
+
+/* Seminar photograph. The image stays within the existing About section. */
+.seminar-photo {
+  margin: 36px auto 0;
+}
+
+.seminar-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  object-position: center 52%;
+  border: 1px solid var(--line);
+}
+
+.seminar-photo figcaption {
+  padding-top: 12px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+@media (max-width: 680px) {
+  .seminar-photo img {
+    aspect-ratio: 4 / 3;
+  }
+}
