@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#500000">
+  <title>Schedule editor · VCIM Seminar Series</title>
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/editor.css">
+  <script defer src="../data/seminars.js"></script>
+  <script defer src="../scripts/core.js"></script>
+  <script defer src="../scripts/editor.js"></script>
+</head>
+<body>
+  <header class="editor-header"><div class="editor-container"><a href="../index.html" class="editor-brand">VCIM <span>Content studio</span></a><a href="../index.html" target="_blank" rel="noopener">View saved site ↗</a></div></header>
+  <main class="editor-container">
+    <section class="editor-intro"><p class="kicker">A new semester. A few simple edits.</p><h1>Your series, <em>in good order.</em></h1><p>Add semesters and update the three details that matter: the date, the speaker, and the title.</p></section>
+    <div class="local-note"><strong>This is a local file editor, not a publishing dashboard.</strong><p>Export <code>seminars.js</code>, replace the file in the website’s <code>data/</code> folder, then upload the updated file to your host. Your changes are not published automatically.</p></div>
+    <div id="draft-notice" class="draft-notice" hidden><p>A previous editing draft is saved in this browser.</p><div><button type="button" id="restore-draft" class="small-button">Restore draft</button><button type="button" id="discard-draft" class="small-button">Discard draft</button></div></div>
+    <div class="editor-toolbar"><div><label for="import-file" class="button secondary file-button">Open content file<input id="import-file" type="file" accept=".js,.json,application/json,text/javascript"></label><button type="button" id="check-content" class="button secondary">Check content</button></div><button type="button" id="export-file" class="button primary">Export seminars.js <span aria-hidden="true">↓</span></button></div>
+    <div id="editor-feedback" class="editor-feedback" role="status" aria-live="polite" hidden></div>
+    <div id="validation-errors" class="validation-errors" role="alert" hidden></div>
+    <div class="editor-workspace" id="editor-workspace">
+      <aside class="semester-sidebar" aria-label="Semesters"><div class="sidebar-heading"><h2>Semesters</h2><span id="semester-number"></span></div><div id="editor-semesters" class="editor-semesters"></div><button type="button" id="show-new-semester" class="button secondary add-semester">+ Add semester</button></aside>
+      <section class="semester-editor" aria-labelledby="editing-heading">
+        <div class="editing-header"><div><p class="kicker">Currently editing</p><h2 id="editing-heading"></h2></div><span id="editing-count"></span></div>
+        <div class="metadata-grid"><label for="edit-season">Semester<select id="edit-season"><option>Winter</option><option>Spring</option><option>Summer</option><option>Fall</option></select></label><label for="edit-year">Year<input id="edit-year" type="number" min="2000" max="2199" step="1"></label><label for="edit-status">Status<select id="edit-status"><option value="upcoming">Coming soon</option><option value="current">In progress / current</option><option value="completed">Completed / archive</option></select></label></div>
+        <p class="field-note">Marking this semester as current moves the previous current semester to the completed archive. Semester links use the stable ID <code id="editing-id"></code>.</p>
+        <div class="talks-heading"><h3>Talks</h3><button id="sort-talks" type="button" class="small-button">Sort by date ↓</button></div>
+        <p id="no-talks" class="no-talks" hidden>No talks yet. The public site will show “Schedule to be announced” until you add one.</p>
+        <div id="editor-talks"></div>
+        <div class="editor-bottom-actions"><button type="button" id="add-talk" class="button secondary">+ Add a talk</button><button type="button" id="delete-semester" class="danger-link">Delete this semester</button></div>
+      </section>
+    </div>
+    <details class="site-settings"><summary>Site links and organizing team</summary><div class="settings-grid"><label for="site-chair">Seminar chair<input id="site-chair" type="text"></label><label for="site-support">Administrative support <span>(one name per line)</span><textarea id="site-support" rows="3"></textarea></label><label for="site-program-url">Ph.D. program link<input id="site-program-url" type="url"></label><label for="site-college-url">College link<input id="site-college-url" type="url"></label><label for="site-timezone">Timezone for “upcoming” dates<input id="site-timezone" type="text" placeholder="America/Chicago"></label></div></details>
+    <footer class="editor-footer"><span id="draft-status" role="status" aria-live="polite">Loaded from data/seminars.js.</span><span>No accounts. No backend. Your files stay with you.</span></footer>
+  </main>
+  <dialog id="new-semester-dialog" aria-labelledby="new-semester-heading"><form id="new-semester-form"><p class="kicker">Keep the conversation going</p><h2 id="new-semester-heading">Add a semester</h2><p>Its tab and year selector will appear automatically on the website after you export and replace the data file.</p><label for="new-season">Semester<select id="new-season" required><option>Spring</option><option>Summer</option><option>Fall</option><option>Winter</option></select></label><label for="new-year">Year<input id="new-year" type="number" min="2000" max="2199" step="1" required></label><label for="new-status">Status<select id="new-status"><option value="upcoming">Coming soon</option><option value="current">In progress / current</option><option value="completed">Completed / archive</option></select></label><p id="new-semester-error" class="dialog-error" role="alert" hidden></p><div class="dialog-actions"><button type="button" id="cancel-new-semester" class="button secondary">Cancel</button><button type="submit" class="button primary">Create semester</button></div></form></dialog>
+</body>
+</html>
