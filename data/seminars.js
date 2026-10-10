@@ -43,7 +43,7 @@ window.VCIM_DATA = {
         {
           "date": "2026-10-12",
           "speaker": "Wai Tong",
-          "title": "TBD"
+          "title": "Rethinking Workflows Through Immersive Technologies"
         },
         {
           "date": "2026-10-20",
