@@ -13,8 +13,8 @@ window.VCIM_DATA = {
     "chair": "Suryansh Kumar",
     "support": [
       "Staci Dunn",
-      "Jackie Rangel",
-      "Sabarish V. Babu"
+      "Sabarish V. Babu",
+      "Donald House"
     ],
     "timeZone": "America/Chicago"
   },
