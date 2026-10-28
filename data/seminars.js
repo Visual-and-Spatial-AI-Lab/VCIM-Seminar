@@ -54,6 +54,21 @@ window.VCIM_DATA = {
           "date": "2026-10-26",
           "speaker": "Edgar Rojas-Muñoz",
           "title": "Bring back your imaginary friends! Towards developing life-long digital companions."
+        },
+        {
+          "date": "2026-11-02",
+          "speaker": "Stewart E. Jiff",
+          "title": "TBD"
+        },
+        {
+          "date": "2026-11-09",
+          "speaker": "TBD",
+          "title": "TBD"
+        },
+        {
+          "date": "2026-11-16",
+          "speaker": "Aaron Thibault",
+          "title": "TBD"
         }
       ]
     },
