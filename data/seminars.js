@@ -57,7 +57,7 @@ window.VCIM_DATA = {
         },
         {
           "date": "2026-11-02",
-          "speaker": "Stewart E. Jiff",
+          "speaker": "Stewart E. Ziff",
           "title": "Affect as a Continuous Process: Exploring Neuromorphic Computation for Embodied AI"
         },
         {
