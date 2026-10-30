@@ -62,8 +62,8 @@ window.VCIM_DATA = {
         },
         {
           "date": "2026-11-09",
-          "speaker": "TBD",
-          "title": "TBD"
+          "speaker": "Bryan Kim",
+          "title": "Turning Action into Play, Play into Research: Health and Learning"
         },
         {
           "date": "2026-11-16",
